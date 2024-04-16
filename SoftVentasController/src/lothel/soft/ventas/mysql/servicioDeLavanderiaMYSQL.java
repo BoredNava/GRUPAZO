@@ -3,16 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package principal;
-
-import lothel.soft.evento.dao.EspacioDAO;
-import lothel.soft.evento.model.Espacio;
-import lothel.soft.evento.mysql.EspacioMYSQL;
+package lothel.soft.ventas.mysql;
 
 /**
  *
  * @author efeproceres
  */
-public class principal {
-    
+public class servicioDeLavanderiaMYSQL {
+
 }
