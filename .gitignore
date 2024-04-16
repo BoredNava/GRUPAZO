@@ -23,3 +23,6 @@
 hs_err_pid*
 replay_pid*
 /SoftRRHHModel/build/
+/SoftEventoModel/build/
+/SoftEventoController/build/
+/SoftManager/build/

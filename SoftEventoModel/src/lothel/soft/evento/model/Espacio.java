@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author efeproceres
  */
 public class Espacio {
+    private static int correlativo=1;
     private int idEspacio;
     private int numeroPiso;
     private String seccion;
@@ -24,6 +25,8 @@ public class Espacio {
         this.seccion = seccion;
         this.aforo = aforo;
         this.disponibilidad = disponibilidad;
+        this.idEspacio=correlativo;
+        correlativo=correlativo+1;
     }
 
     public int getIdEspacio() {
