@@ -15,6 +15,7 @@ import lothel.soft.evento.mysql.EspacioMYSQL;
  * @author efeproceres
  */
 public class principal {
+<<<<<<< HEAD
     public static void main(String [] args){
         EspacioDAO espacioDAO = new EspacioMYSQL();
         int resultado=0 ;  
@@ -37,4 +38,7 @@ public class principal {
             System.out.println(esp.getIdEspacio()+"\n");    
         }    
     }
+=======
+    
+>>>>>>> f50772ca2996e05e466e5c35e94d5458fe826568
 }

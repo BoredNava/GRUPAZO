@@ -5,10 +5,16 @@
 
 package lothel.soft.ventas.dao;
 
+import java.util.ArrayList;
+import lothel.soft.ventas.model.Item;
+
 /**
  *
  * @author efeproceres
  */
-public class itemDAO {
-
+public interface itemDAO {
+    public int insertar(Item item);
+    public int modificar(Item item,double precio);
+    public int eliminar(int idItem);
+    public ArrayList<Item> listarItems();
 }
