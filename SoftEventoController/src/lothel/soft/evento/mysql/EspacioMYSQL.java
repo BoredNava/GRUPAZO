@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.CallableStatement;
+import java.sql.DriverManager;
 import java.sql.Statement;
 import lothel.soft.evento.dao.EspacioDAO;
 /**
@@ -27,7 +28,9 @@ public class EspacioMYSQL implements EspacioDAO{
     public int insertar(Espacio espacio) {
         int resultado = 0;
         try{
-            con = DBManager.getInstance().getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://db-lothel.cjgycpwdcgx4.us-east-1.rds.amazonaws.com:3306/lothel","admin","lothel321");
+            //con = DBManager.getInstance().getConnection();
             //cs.registerOutParameter("_id_empleado",java.sql.Types.INTEGER);
             cs = con.prepareCall("{call INSERTAR_ESPACIO(?,?,?,?)}");
             cs.setInt("_numeroPiso", espacio.getNumeroPiso());
@@ -54,11 +57,14 @@ public class EspacioMYSQL implements EspacioDAO{
     public int modificar(Espacio espacio) {
         int resultado = 0;
         try{
-            con = DBManager.getInstance().getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://db-lothel.cjgycpwdcgx4.us-east-1.rds.amazonaws.com:3306/lothel","admin","lothel321");
+            
+            //con = DBManager.getInstance().getConnection();
             
             cs = con.prepareCall("{call MODIFICAR_ESPACIO(?,?)}");
             cs.setInt("_idEspacio", espacio.getIdEspacio());
-            cs.setBoolean("_disponibilidad", espacio.getDisponibilidad());
+            cs.setInt("_aforo", espacio.getAforo());
             resultado = cs.executeUpdate();
             
         }catch(Exception ex){
@@ -73,7 +79,8 @@ public class EspacioMYSQL implements EspacioDAO{
     public int eliminar(int idEspacio) {
        int resultado = 0;
         try{
-            con = DBManager.getInstance().getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://db-lothel.cjgycpwdcgx4.us-east-1.rds.amazonaws.com:3306/lothel","admin","lothel321");
             
             cs = con.prepareCall("{call ELIMINAR_ESPACIO(?)}");
             cs.setInt("_idEspacio", idEspacio);
@@ -92,14 +99,16 @@ public class EspacioMYSQL implements EspacioDAO{
         ArrayList<Espacio> espacios =  new ArrayList<Espacio>();
         
         try{
-            con = DBManager.getInstance().getConnection();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://db-lothel.cjgycpwdcgx4.us-east-1.rds.amazonaws.com:3306/lothel","admin","lothel321");
             
-            String sql = "SELECT * FROM espacio";
-            st = con.createStatement();
-            rs = st.executeQuery(sql);
+            cs = con.prepareCall("{call LISTAR_ESPACIO()}");
+            String sql="SELECT * FROM Espacio";
+            rs = cs.executeQuery(sql);
             
             while(rs.next()){
                 Espacio espacio = new Espacio();
+                espacio.setIdEspacio(rs.getInt("idEspacio"));
                 espacio.setAforo(rs.getInt("aforo"));
                 espacio.setDisponibilidad(rs.getBoolean("disponibilidad"));
                 espacio.setNumeroPiso(rs.getInt("numeroPiso"));
