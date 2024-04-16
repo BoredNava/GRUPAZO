@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/EstadoReserva.java</file>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/Familiar.java</file>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/Simple.java</file>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/IConsultable.java</file>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/Matrimonial.java</file>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/Habitacion.java</file>
-            <file>file:/C:/Andres/OCTAVO%20CICLO/lp2/ProyectoLP2/SoftGestReservaModel/src/lother/soft/gestReserva/Model/ReservaHabitacion.java</file>
+            <file>file:/home/marcelo/Documentos/Universidad/Programacion_3/entregable2/SoftGestReservaModel/src/lothel/soft/gestReserva/model/Familiar.java</file>
+            <file>file:/home/marcelo/Documentos/Universidad/Programacion_3/entregable2/SoftGestReservaModel/src/lothel/soft/gestReserva/model/ReservaHabitacion.java</file>
+            <file>file:/home/marcelo/Documentos/Universidad/Programacion_3/entregable2/SoftGestReservaModel/src/lothel/soft/gestReserva/model/Matrimonial.java</file>
+            <file>file:/home/marcelo/Documentos/Universidad/Programacion_3/entregable2/SoftGestReservaModel/src/lothel/soft/gestReserva/model/Simple.java</file>
+            <file>file:/home/marcelo/Documentos/Universidad/Programacion_3/entregable2/SoftGestReservaModel/src/lothel/soft/gestReserva/model/Habitacion.java</file>
         </group>
     </open-files>
 </project-private>

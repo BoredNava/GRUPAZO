@@ -2,13 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
-package lother.soft.gestReserva.Model;
+package lothel.soft.gestReserva.model;
 
 /**
  *
- * @author efeproceres
+ * @author marcelo
  */
-public class IConsultable {
-
+public enum EstadoReserva {
+    EN_CURSO, COMPLETADA, CONFIRMADA;
 }
