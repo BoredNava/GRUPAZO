@@ -16,6 +16,9 @@ import lothel.soft.evento.mysql.EspacioMYSQL;
  */
 public class principal {
 <<<<<<< HEAD
+    //123213213123123123123123123
+=======
+<<<<<<< HEAD
     public static void main(String [] args){
         EspacioDAO espacioDAO = new EspacioMYSQL();
         int resultado=0 ;  
@@ -41,4 +44,5 @@ public class principal {
 =======
     
 >>>>>>> f50772ca2996e05e466e5c35e94d5458fe826568
+>>>>>>> 345c7e8bd62fdfc9e0b54db2fdbcc6ade8229c6e
 }
